@@ -7,6 +7,7 @@
     "lint": "tsc --noEmit && eslint ./src/**/*.ts --quiet --fix",
     "build": "tsc --build",
     "start:dev": "tsnd --respawn --transpileOnly ./src",
+    "start:api": "tsnd --respawn --transpileOnly ./src/api",
     "start:prod": "node ./dist"
   },
   "keywords": [],

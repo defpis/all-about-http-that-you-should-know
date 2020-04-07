@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+
+    <button id="btn">send</button>
+    <!-- <script>
+      function isOK(status) {
+        return status >= 200 && status < 300;
+      }
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'http://localhost:4001');
+      xhr.send();
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState == 4 && isOK(xhr.status)) {
+          const data = JSON.parse(xhr.responseText);
+          console.log(data);
+        }
+      };
+    </script> -->
+    <!-- <script src="http://localhost:4001"></script> -->
+    <script>
+      // function testRequest() {
+      //   return fetch('/api', {
+      //     method: 'PUT',
+      //   });
+      // }
+
+      // testRequest();
+
+      // window.onload = () => {
+      //   const btn = document.getElementById('btn');
+      //   btn.addEventListener('click', () => {
+      //     testRequest();
+      //   });
+      // };
+      fetch('/api', {
+        method: 'PUT',
+      });
+    </script>
+  </body>
+</html>

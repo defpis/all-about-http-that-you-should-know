@@ -1,10 +1,15 @@
-import * as http from 'http';
+import http from 'http';
+import fs from 'fs';
 
 const server = http.createServer(
   (req: http.IncomingMessage, res: http.ServerResponse) => {
-    console.log(`${req.method} ${req.url}`);
-    res.write('Hello World!');
-    res.end();
+    console.log(`${req.method} => ${req.url}`);
+    const html = fs.readFileSync('./src/index.html', 'utf-8');
+    res.writeHead(200, {
+      'Content-Type': 'text/html',
+      // 'Content-Type': 'text/plain',
+    });
+    res.end(html);
   },
 );
 
