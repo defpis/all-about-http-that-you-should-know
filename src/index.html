@@ -26,23 +26,20 @@
     </script> -->
     <!-- <script src="http://localhost:4001"></script> -->
     <script>
-      // function testRequest() {
-      //   return fetch('/api', {
-      //     method: 'PUT',
-      //   });
-      // }
+      function testRequest() {
+        return fetch('http://localhost:4001', {
+          method: 'GET',
+        });
+      }
 
-      // testRequest();
+      testRequest();
 
-      // window.onload = () => {
-      //   const btn = document.getElementById('btn');
-      //   btn.addEventListener('click', () => {
-      //     testRequest();
-      //   });
-      // };
-      fetch('/api', {
-        method: 'PUT',
-      });
+      window.onload = () => {
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', () => {
+          testRequest();
+        });
+      };
     </script>
   </body>
 </html>

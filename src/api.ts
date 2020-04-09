@@ -11,6 +11,7 @@ const server = http.createServer(
       // 'Access-Control-Allow-Methods': 'PUT',
       // 'Access-Control-Allow-Methods': 'POST, PUT, PATCH, DELETE',
       // 'Access-Control-Max-Age': 86400,
+      'Set-Cookie': ['id=1'],
     });
     res.end(JSON.stringify({ message: 'Hello World!' }));
     // res.end('console.log("Hello World!");');
