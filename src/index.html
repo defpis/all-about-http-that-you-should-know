@@ -29,6 +29,9 @@
       function testRequest() {
         return fetch('http://localhost:4001', {
           method: 'GET',
+          credentials: 'include',
+        }).then(() => {
+          console.log(document.cookie);
         });
       }
 

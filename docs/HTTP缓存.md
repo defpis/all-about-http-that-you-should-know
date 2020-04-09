@@ -66,7 +66,7 @@ Expires 为负数，那么就等同于 no-cache，正数或零同 max-age 的表
 
 它表示：该资源只能被浏览器缓存，而不能被代理缓存。max-age 标识为 0，说明该缓存资源立即过期，must-revalidate 告诉浏览器，需要验证文件是否过期，接下来可能会使用协商缓存进行判断。
 
-**HTTP 规定，如果 Cache-control 的 max-age 和 Expires 同时出现，那么 max-age 的优先级更高，他会默认覆盖掉 expires。**
+**HTTP 规定：如果 Cache-control 的 max-age 和 Expires 同时出现，那么 max-age 的优先级更高。**
 
 关于 Cache-control 取值总结，我们可以参考 Google developer 的一个图示：
 
