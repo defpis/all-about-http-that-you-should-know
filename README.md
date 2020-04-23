@@ -6,5 +6,6 @@
 - [HTTP 缓存](https://github.com/defpis/all-about-http-that-you-should-know/blob/master/docs/HTTP%E7%BC%93%E5%AD%98.md)
 - [cookie 和 session](https://github.com/defpis/all-about-http-that-you-should-know/blob/master/docs/cookie%E5%92%8Csession.md)
 - [HTTP 长连接](https://github.com/defpis/all-about-http-that-you-should-know/)
+- [HTTP 数据协商](https://github.com/defpis/all-about-http-that-you-should-know/)
 - [HTTP2](https://github.com/defpis/all-about-http-that-you-should-know/)
 - [HTTPS](https://github.com/defpis/all-about-http-that-you-should-know/)

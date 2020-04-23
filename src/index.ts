@@ -4,12 +4,21 @@ import fs from 'fs';
 const server = http.createServer(
   (req: http.IncomingMessage, res: http.ServerResponse) => {
     console.log(`${req.method} => ${req.url}`);
-    const html = fs.readFileSync('./src/index.html', 'utf-8');
-    res.writeHead(200, {
-      'Content-Type': 'text/html',
-      // 'Content-Type': 'text/plain',
-    });
-    res.end(html);
+
+    if (req.url === '/redirect') {
+      res.writeHead(302, {
+        Location: 'http://localhost:4001/api',
+      });
+      res.end();
+    } else {
+      const html = fs.readFileSync('./src/index.html', 'utf-8');
+      res.writeHead(200, {
+        'Content-Type': 'text/html',
+        // 'Content-Type': 'text/plain',
+        'Content-Security-Policy': 'default-src http; https;',
+      });
+      res.end(html);
+    }
   },
 );
 
